@@ -40,11 +40,11 @@ apps:
   #     customValues: true
   #     values:
   #       - values-local.yaml
-  # - name: demo
-  #   project: dev
-  #   namespace: default
-  #   source:
-  #     path: demo
+  - name: demo
+    project: dev
+    namespace: default
+    source:
+      path: demo
   - name: sample-helm-1
     project: dev
     namespace: default

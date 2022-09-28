@@ -22,7 +22,8 @@ server:
       - url: https://github.com/dev-chulbuji/devops_k8s.git
 
     accounts.admin: apiKey, login
-    accounts.alice: apiKey, login
+    accounts.seobi: apiKey, login
+    accounts.kimkevin90: apiKey, login
 
     dex.config: |
       connectors:
@@ -30,16 +31,17 @@ server:
           id: github
           name: GitHub
           config:
-            clientID: xxx
-            clientSecret: xxx
+            clientID: 깃허브 입력
+            clientSecret: 깃허브 입력
             orgs:
-            - name: xxx
+            - name: devops-argocdtest
 
   rbacConfig:
     policy.default: role:readonly
     policy.csv: |
       p, role:local-user-admin, applications, *, */*, allow
-      g, alice, role:local-user-admin
+      g, seobi, role:local-user-admin
+      g, kimkevin90, role:local-user-admin
 
       p, role:org-devops, applications, *, */*, allow
       p, role:org-devops, clusters, *, *, allow
