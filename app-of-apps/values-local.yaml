@@ -55,3 +55,8 @@ apps:
     namespace: default
     source:
       path: sample-helm-2
+  - name: sample-helm-3
+    project: dev
+    namespace: default
+    source:
+      path: sample-helm-3
