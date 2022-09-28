@@ -8,7 +8,7 @@ metadata:
 spec:
   project: dev
   source:
-    repoURL: https://github.com/dev-chulbuji/devops_k8s.git
+    repoURL: https://github.com/kimkevin90/argoCD_basic
     targetRevision: HEAD
     path: sample-yaml
 
@@ -17,11 +17,11 @@ spec:
     namespace: default
 
   syncPolicy:
-#    automated:
-#      prune: true
-#      selfHeal: true
-#      allowEmpty: false
+    #    automated:
+    #      prune: true
+    #      selfHeal: true
+    #      allowEmpty: false
     syncOptions:
-    - Validate=false
-    - CreateNamespace=true
-    - PrunePropagationPolicy=foreground
+      - Validate=false
+      - CreateNamespace=true
+      - PrunePropagationPolicy=foreground

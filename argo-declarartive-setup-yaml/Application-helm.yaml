@@ -6,10 +6,10 @@ metadata:
 spec:
   destination:
     namespace: default
-    server: 'https://kubernetes.default.svc'
+    server: "https://kubernetes.default.svc"
   project: dev
   source:
-    repoURL: https://github.com/dev-chulbuji/devops_k8s.git
+    repoURL: https://github.com/kimkevin90/argoCD_basic
     targetRevision: HEAD
     path: sample-helm-1
     helm:
