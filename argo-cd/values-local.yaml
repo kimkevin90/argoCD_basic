@@ -21,6 +21,7 @@ server:
     repositories: |
       - url: https://github.com/dev-chulbuji/devops_k8s.git
 
+    accounts.admin: apiKey, login
     accounts.alice: apiKey, login
 
     dex.config: |
