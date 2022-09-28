@@ -5,10 +5,10 @@ metadata:
 spec:
   type: NodePort
   ports:
-  - name: http
-    protocol: TCP
-    port: 80
-    targetPort: 80
-    nodePort: 30081
+    - name: http
+      protocol: TCP
+      port: 80
+      targetPort: 80
+      nodePort: 30082
   selector:
     run: sample-yaml
