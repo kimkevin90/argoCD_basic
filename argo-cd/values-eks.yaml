@@ -20,22 +20,22 @@ server:
   extraArgs:
     - --insecure
   config:
-#    url: http://127.0.0.1:30080
+    #    url: http://127.0.0.1:30080
     accounts.admin: apiKey, login
     repositories: |
-      - url: https://github.com/dev-chulbuji/devops_k8s.git
-      - url: https://github.com/dev-chulbuji/devops_sample_app_python.git
+      - url: https://github.com/kimkevin90/argoCD_basic.git
+      - url: https://github.com/kimkevin90/devops_CICD_test_app.git
 
-#    dex.config: |
-#      connectors:
-#        - type: github
-#          id: github
-#          name: GitHub
-#          config:
-#            clientID: xxx
-#            clientSecret: xxx
-#            orgs:
-#            - name: xxx
+  #    dex.config: |
+  #      connectors:
+  #        - type: github
+  #          id: github
+  #          name: GitHub
+  #          config:
+  #            clientID: xxx
+  #            clientSecret: xxx
+  #            orgs:
+  #            - name: xxx
 
   rbacConfig:
     policy.default: role:readonly

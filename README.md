@@ -39,4 +39,26 @@
 
 ### 06 Argo CI/CD
 
-- 깃허브에 코드 푸쉬되면 github actions가 트리거되고, 도커이미지 빌드 후 ECR에 push되고, argo는 config repository를 보게되고 config repository에 values 업데이트된 내용이 argocd에 배포됨
+- 깃허브에 코드 푸쉬되면 github actions가 트리거되고, 도커이미지 빌드 후 ECR에 push되고,
+  cd작동하여 git push --prune으로 config repository 업데이트됨.
+  argo는 config repository를 보게되고 config repository에 values 업데이트된 내용이 argocd에 배포됨
+
+1. secret ecr 생성
+   k create secret docker-registry ecr-cred \
+    --docker-server=${clientId}.dkr.ecr.ap-northeast-2.amazonaws.com \
+    --docker-username=AWS --docker-password=$(aws ecr get-login-password --region ap-northeast-2) \
+    --namespace=default
+
+2. git hub repo security에 AWS_ACCESS_KEY_ID / AWS_SECRET_ACCESS_KEY / GH_TOKEN 생성
+
+3. app version 올린 후 app-of-apps 작동
+
+4. 기본 pulling 3분 대기하므로 구동 app의 repo setting 에서 webhook 등록 시 바로 작용한다.
+   (http://localhost/api/webhook)
+
+### 06 Argo eks CI/CD
+
+1. argocd를 eks에 배포후 alb를 통해 config repo 연결
+2. alb 설치 - alb 디렉토리에서 alb 설치(make upgrade-eks)
+3. argocd 배포 - argocd디렉토리에서 make upgrade-eks실행 되면서 aws alb컨트롤러 생성
+4.
