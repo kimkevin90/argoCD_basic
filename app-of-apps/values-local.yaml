@@ -45,11 +45,11 @@ apps:
     namespace: default
     source:
       path: demo
-  - name: client
-    project: dev
-    namespace: default
-    source:
-      path: client
+  # - name: client
+  #   project: dev
+  #   namespace: default
+  #   source:
+  #     path: client
   # - name: sample-helm-1
   #   project: dev
   #   namespace: default
