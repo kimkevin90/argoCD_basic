@@ -45,8 +45,14 @@ apps:
     namespace: default
     source:
       path: client
+      customValues: true
+      values:
+        - values-eks.yaml
   - name: auth
     project: default
     namespace: default
     source:
       path: auth
+      customValues: true
+      values:
+        - values-eks.yaml
