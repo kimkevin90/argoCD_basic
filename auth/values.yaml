@@ -5,10 +5,10 @@ image:
   imagePullSecrets:
     - name: ecr-cred
 service:
-  type: NodePort
+  # type: NodePort
   protocol: TCP
   targetPort: 3000
   port: 3000
-  nodePort: 31082
+  # nodePort: 31082
 ingress:
   enabled: false

@@ -28,12 +28,12 @@ kind: Service
 metadata:
   name: {{ template "sample-helm.fullname" . }}
 spec:
-  type: NodePort
+  # type: NodePort
   ports:
   - protocol: {{ .Values.service.protocol }}
     port: {{ .Values.service.port }}
     targetPort: {{ .Values.service.targetProt }}
-    nodePort: {{ .Values.service.nodePort }}
+    # nodePort: {{ .Values.service.nodePort }}
   selector:
     {{- include "sample-helm.selectorLabels" . | nindent 8 }}
 
