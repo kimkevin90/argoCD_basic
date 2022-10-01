@@ -1,13 +1,13 @@
 repoURL: "https://github.com/kimkevin90/argoCD_basic.git"
 apps:
-  - name: demo
-    project: default
-    namespace: default
-    source:
-      path: demo
-      customValues: true
-      values:
-        - values-eks.yaml
+  # - name: demo
+  #   project: default
+  #   namespace: default
+  #   source:
+  #     path: demo
+  #     customValues: true
+  #     values:
+  #       - values-eks.yaml
   # - name: prometheus
   #   project: default
   #   namespace: prom
@@ -40,19 +40,19 @@ apps:
   #     customValues: true
   #     values:
   #       - values-eks.yaml
-  # - name: client
-  #   project: default
-  #   namespace: default
-  #   source:
-  #     path: client
-  #     customValues: true
-  #     values:
-  #       - values-eks.yaml
-  # - name: auth
-  #   project: default
-  #   namespace: default
-  #   source:
-  #     path: auth
-  #     customValues: true
-  #     values:
-  #       - values-eks.yaml
+  - name: client
+    project: default
+    namespace: default
+    source:
+      path: client
+      customValues: true
+      values:
+        - values-eks.yaml
+  - name: auth
+    project: default
+    namespace: default
+    source:
+      path: auth
+      customValues: true
+      values:
+        - values-eks.yaml
