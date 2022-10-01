@@ -11,4 +11,4 @@ template:
 	helm template -f values.yaml client .
 
 template-eks:
-	helm template -f values-eks.yaml demo .
+	helm template -f values-eks.yaml client .
