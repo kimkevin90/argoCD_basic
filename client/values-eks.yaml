@@ -1,0 +1,19 @@
+replicas: 1
+image:
+  repository: 225047281420.dkr.ecr.ap-northeast-2.amazonaws.com/client
+  # 아래 버전 app cicd에서 자동 적용됨
+  tag: 1.0.8
+  imagePullSecrets:
+    - name: ecr-cred
+service:
+  type: NodePort
+  protocol: TCP
+  targetPort: 8080
+  port: 8080
+  nodePort: 31080
+ingress:
+  enabled: true
+  annotations:
+    kubernetes.io/ingress.class: alb
+    alb.ingress.kubernetes.io/scheme: internet-facing
+    alb.ingress.kubernetes.io/tags: Environment=prod,Name=demo-alb

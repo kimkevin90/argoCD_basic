@@ -61,4 +61,4 @@
 1. argocd를 eks에 배포후 alb를 통해 config repo 연결
 2. alb 설치 - alb 디렉토리에서 alb 설치(make upgrade-eks)
 3. argocd 배포 - argocd디렉토리에서 make upgrade-eks실행 되면서 aws alb컨트롤러 생성
-4.
+4. app-of-apps eks 버전으로 프로젝트 생성 namespace(argo)
