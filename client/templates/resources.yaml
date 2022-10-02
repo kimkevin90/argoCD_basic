@@ -58,7 +58,14 @@ spec:
             pathType: Prefix
             backend:
               service:
-                name: {{ template "sample-helm.fullname" . }}
+                name: client-srv
                 port:
                   number: {{ .Values.service.port }}
+          - path: /api/users/
+            pathType: Prefix
+            backend:
+              service:
+                name: auth-srv
+                port:
+                  number: {{ .Values.service.port }}                  
 {{- end -}}
