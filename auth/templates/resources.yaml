@@ -36,10 +36,12 @@ kind: Service
 metadata:
   name: auth-srv
 spec:
+  type: NodePort
   ports:
   - protocol: {{ .Values.service.protocol }}
     port: {{ .Values.service.port }}
     targetPort: {{ .Values.service.targetProt }}
+    nodePort: {{ .Values.service.nodePort }}
   selector:
     app: auth
 ---
