@@ -10,7 +10,7 @@ service:
   protocol: TCP
   targetPort: 3000
   port: 3000
-  nodePort: 31080
+  nodePort: 31081
 ingress:
   enabled: false
   annotations:
