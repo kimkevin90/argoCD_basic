@@ -61,7 +61,7 @@ spec:
                 name: client-srv
                 port:
                   number: {{ .Values.service.port }}
-          - path: /api/users/
+          - path: /api/users
             pathType: Prefix
             backend:
               service:
