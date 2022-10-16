@@ -2,7 +2,7 @@ replicas: 1
 image:
   repository: 225047281420.dkr.ecr.ap-northeast-2.amazonaws.com/client
   # 아래 버전 app cicd에서 자동 적용됨
-  tag: 1.2.8
+  tag: 1.2.9
   imagePullSecrets:
     - name: ecr-cred
 service:
